@@ -50,7 +50,19 @@ red   = pygame.Color(255,0,0)
 green = pygame.Color(0,255,0)
 blue  = pygame.Color(0,0,255)
 
+fps_controller = pygame.time.Clock()
 
+# Cobra tamanho quadrado
+square_size = 20
+
+def init_vars():
+    global head_pos, snake_body, food_spawn, score, direction
+    direction = "RIGHT"
+    head_pos = [120,60]
+    snake_body = [[120,60]]
+    food_pos = [random.randrange(1,(frame_size_x // square_size)) * square_size,
+                random.randrange(1,(frame_size_y // square_size)) * square_size]
+    food_spawn = True
 
 
 
